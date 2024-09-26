@@ -5,26 +5,25 @@ import Game.Levels.Relation
 import Game.Levels.EquivalenceRelation
 
 -- Here's what we'll put on the title screen
-Title "Hello World Game"
+Title "CS1231 Tutorial Exercise Game"
 Introduction
 "
-This text appears on the starting page where one selects the world/level to play.
-You can use markdown.
+Here are some exercises in CS1231, but in a game style!
+You may navigate your proof through entering some commands, and we will check if your proof is correct.
+Disclaimer: This game is experimental, and not affiliated with the official CS1231 module,
+ and it is of course not mandatory.
 "
 
 Info "
-Here you can put additional information about the game. It is accessible
-from the starting through the drop-down menu.
-
-For example: Game version, Credits, Link to Github and Zulip, etc.
-
-Use markdown.
+Contact sunm07@u.nus.edu for any feedback or bug reports.
+The game is based on a proof assistant called LEAN, to learn more, visit
+https://lean-lang.org/ or https://adam.math.hhu.de/#/g/leanprover-community/nng4
 "
 
 /-! Information to be displayed on the servers landing page. -/
 Languages "English"
-CaptionShort "Game Template"
-CaptionLong "You should use this game as a template for your own game and add your own levels."
+CaptionShort "CS1231 Tutorial Exercise Game"
+CaptionLong "."
 -- Prerequisites "" -- add this if your game depends on other games
 -- CoverImage "images/cover.png"
 

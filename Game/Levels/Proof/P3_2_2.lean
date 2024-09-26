@@ -31,8 +31,11 @@ Statement : ∀ x : ℝ, (x ^ 2 + 9 = 6 * x → x - 3 = 0) := by
     norm_num
   linarith
 
+Conclusion "If you ever want information about the theorems,
+ you can click on items in the list of theorems on the right."
 
-/--'intro' introduce an element (for '∀x...') or an assumption (for 'P → Q').--/
+/--'intro' introduce an element x (for Goal = 'For any x...'),
+or an assumption P(for Goal = If P then Q).--/
 TacticDoc intro
 
 /--'apply T' applies a theorem T to the goal.--/

@@ -65,5 +65,3 @@ Statement : (T • (S • R))  = ((T • S) • R) := by
 /--Tactic "tauto" deal with purely logical deduction.-/
 TacticDoc tauto
 NewTactic tauto
-
-DisabledTheorem Even_negation_iff Even_negation Even_add eq_zero_of_mul_self_eq_zero

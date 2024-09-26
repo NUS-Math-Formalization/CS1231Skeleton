@@ -62,3 +62,6 @@ TacticDoc rewrite
 TacticDoc rw
 
 NewTactic ext left right rewrite rw
+
+
+DisabledTheorem eq_zero_of_mul_self_eq_zero

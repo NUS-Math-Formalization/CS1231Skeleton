@@ -40,3 +40,5 @@ Statement : A ⊆ B ↔ A ∩ B = A := by
 --/
 TacticDoc obtain
 NewTactic obtain
+
+DisabledTheorem eq_zero_of_mul_self_eq_zero

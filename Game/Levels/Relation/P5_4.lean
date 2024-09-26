@@ -82,4 +82,4 @@ NewTheorem Even_negation Even_negation_iff Rel.inv_def
 DefinitionDoc R as "R"
 NewDefinition R
 
-DisabledTheorem eq_zero_of_mul_self_eq_zero
+OnlyTheorems Even_negation Even_negation_iff Rel.inv_def

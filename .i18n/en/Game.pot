@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Thu Sep 26 21:27:33 2024\n"
+"POT-Creation-Date: Fri Sep 27 03:39:26 2024\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -29,10 +29,13 @@ msgid "Prove 'there is a real number x such that x^2 + 9 = 6x'."
 msgstr ""
 
 #: Game.Levels.Proof.P3_2
+msgid "We prove theorems here using Tactics. The first tactic is 'use'."
+msgstr ""
+
+#: Game.Levels.Proof.P3_2
 msgid "To show there exists some object x, we only need to provide a witness.\n"
 "That is, some a ∈ ℝ such that a^2 + 9 = 6 * a.\n"
-"\n"
-"Type 'use a' to give the witness, where a ∈ ℝ is the solution to the equation."
+"Type 'use a' in the textbox to give the witness, where a ∈ ℝ is the solution to the equation."
 msgstr ""
 
 #: Game.Levels.Proof.P3_2
@@ -40,6 +43,12 @@ msgid "Now you need to prove that 3^2 + 9 = 6 * 3.\n"
 "Fortunately, this can be done by some automatic tactics.\n"
 "\n"
 "Type 'linarith' or 'norm_num' to verify the equation."
+msgstr ""
+
+#: Game.Levels.Proof.P3_2
+msgid "'use' is a tactic.\n"
+" If you ever want information about the tactic,\n"
+" you can click on 'use' in the list of tactics on the right."
 msgstr ""
 
 #: Game.Levels.Proof.P3_2
@@ -86,7 +95,13 @@ msgid "'linarith' or 'norm_num will check (a - 3)*(a - 3) = a^2 - 6a + 9 holds."
 msgstr ""
 
 #: Game.Levels.Proof.P3_2_2
-msgid "'intro' introduce an element (for '∀x...') or an assumption (for 'P → Q').-"
+msgid "If you ever want information about the theorems,\n"
+" you can click on items in the list of theorems on the right."
+msgstr ""
+
+#: Game.Levels.Proof.P3_2_2
+msgid "'intro' introduce an element x (for Goal = 'For any x...'),\n"
+"or an assumption P(for Goal = If P then Q).-"
 msgstr ""
 
 #: Game.Levels.Proof.P3_2_2
@@ -245,9 +260,7 @@ msgid "Chapter 4. Set"
 msgstr ""
 
 #: Game.Levels.Set
-msgid "Here contains Exercises 4.6 and 4.7 from Chapter 4: Sets.\n"
-"\n"
-"We will learn how to prove theorems in Lean along the way."
+msgid "Here contains Exercises 4.6 and 4.7 from Chapter 4: Sets."
 msgstr ""
 
 #: Game.Levels.Relation.P5_4
@@ -349,6 +362,10 @@ msgid "Type assumption to clear the remaining goals."
 msgstr ""
 
 #: Game.Levels.Relation.P5_4_2
+msgid "Which element should we choose?"
+msgstr ""
+
+#: Game.Levels.Relation.P5_4_2
 msgid "R • S means the composition of two relations R and S.\n"
 "To use • in a tactic, use \"composition\", e.g, unfold composition."
 msgstr ""
@@ -392,9 +409,7 @@ msgid "Chapter 5. Relations"
 msgstr ""
 
 #: Game.Levels.Relation
-msgid "Here contains Exercises 5.4, 5.5 and 5.9 from Chapter 5: Relations.\n"
-"\n"
-"We will learn how to prove theorems in Lean along the way."
+msgid "Here contains Exercises 5.4, 5.5 and 5.9 from Chapter 5: Relations."
 msgstr ""
 
 #: Game.Levels.EquivalenceRelation.P6_2_1
@@ -541,27 +556,26 @@ msgid "Here contains Exercises 6.2 from Chapter 6: Equivalence Relations and par
 msgstr ""
 
 #: Game
-msgid "Hello World Game"
+msgid "CS1231 Tutorial Exercise Game"
 msgstr ""
 
 #: Game
-msgid "This text appears on the starting page where one selects the world/level to play.\n"
-"You can use markdown."
+msgid "Here are some exercises in CS1231, but in a game style!\n"
+"You may navigate your proof through entering some commands, and we will check if your proof is correct.\n"
+"Disclaimer: This game is experimental, and not affiliated with the official CS1231 module,\n"
+" and it is of course not mandatory."
 msgstr ""
 
 #: Game
-msgid "Here you can put additional information about the game. It is accessible\n"
-"from the starting through the drop-down menu.\n"
-"\n"
-"For example: Game version, Credits, Link to Github and Zulip, etc.\n"
-"\n"
-"Use markdown."
+msgid "Contact sunm07@u.nus.edu for any feedback or bug reports.\n"
+"The game is based on a proof assistant called LEAN, to learn more, visit\n"
+"https://lean-lang.org/ or https://adam.math.hhu.de/#/g/leanprover-community/nng4"
 msgstr ""
 
 #: Game
-msgid "Game Template"
+msgid "CS1231 Tutorial Exercise Game"
 msgstr ""
 
 #: Game
-msgid "You should use this game as a template for your own game and add your own levels."
+msgid "."
 msgstr ""

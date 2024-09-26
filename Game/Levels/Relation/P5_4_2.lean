@@ -54,6 +54,7 @@ Statement : (R • R) = R := by
   · intro h1
     rw [composition]
     rw [R] at h1
+    Hint "Which element should we choose?"
     use a
     constructor
     · rw [R]
@@ -75,3 +76,5 @@ NewTheorem Even_add
 'obtain ⟨c,h1⟩ := H is applied to H: ∃ y P(y).--/
 TacticDoc obtain
 NewTactic obtain
+
+OnlyTheorems Even_add
