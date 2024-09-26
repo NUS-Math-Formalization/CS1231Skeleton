@@ -1,4 +1,8 @@
-import Game.Levels.DemoWorld
+-- import Game.Levels.DemoWorld
+import Game.Levels.Proof
+import Game.Levels.Set
+import Game.Levels.Relation
+import Game.Levels.EquivalenceRelation
 
 -- Here's what we'll put on the title screen
 Title "Hello World Game"

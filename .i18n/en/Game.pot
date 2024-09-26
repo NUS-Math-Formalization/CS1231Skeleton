@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Wed Apr 10 15:31:40 2024\n"
+"POT-Creation-Date: Thu Sep 26 21:27:33 2024\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -20,38 +20,524 @@ msgstr ""
 msgid "intermediate goal solved! 🎉"
 msgstr ""
 
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "Hello World"
+#: Game.Levels.Proof.P3_2
+msgid "Exercise 3.2"
 msgstr ""
 
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "This text is shown as first message when the level is played.\n"
-"You can insert hints in the proof below. They will appear in this side panel\n"
-"depending on the proof a user provides."
+#: Game.Levels.Proof.P3_2
+msgid "Prove 'there is a real number x such that x^2 + 9 = 6x'."
 msgstr ""
 
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "You can either start using `«{h}»` or `«{g}»`."
+#: Game.Levels.Proof.P3_2
+msgid "To show there exists some object x, we only need to provide a witness.\n"
+"That is, some a ∈ ℝ such that a^2 + 9 = 6 * a.\n"
+"\n"
+"Type 'use a' to give the witness, where a ∈ ℝ is the solution to the equation."
 msgstr ""
 
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "You should use `«{h}»` now."
+#: Game.Levels.Proof.P3_2
+msgid "Now you need to prove that 3^2 + 9 = 6 * 3.\n"
+"Fortunately, this can be done by some automatic tactics.\n"
+"\n"
+"Type 'linarith' or 'norm_num' to verify the equation."
 msgstr ""
 
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "You should use `«{g}»` now."
+#: Game.Levels.Proof.P3_2
+msgid "Tactic 'linarith' verifies linear equations automatically.-"
 msgstr ""
 
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "This last message appears if the level is solved."
+#: Game.Levels.Proof.P3_2
+msgid "Tactic 'norm_num' verifies arithmetic equations automatically."
 msgstr ""
 
-#: Game.Levels.DemoWorld
-msgid "Demo World"
+#: Game.Levels.Proof.P3_2
+msgid "Tactic 'use a' proves goal ∃x ∈ A... if a is the witness.-"
 msgstr ""
 
-#: Game.Levels.DemoWorld
-msgid "This introduction is shown before one enters level 1 of the demo world. Use markdown."
+#: Game.Levels.Proof.P3_2_2
+msgid "Exercise 3.2 continued"
+msgstr ""
+
+#: Game.Levels.Proof.P3_2_2
+msgid "This is what he proved.\n"
+" Compare the difference of the two statements and their proofs."
+msgstr ""
+
+#: Game.Levels.Proof.P3_2_2
+msgid "To prove 'For any x ∈ ℝ ...', one start with picking an arbitrary a ∈ ℝ.\n"
+"\n"
+"Type 'intro a' to pick such a.\n"
+"(The name 'a' is arbitrary and can be replaced by any name)"
+msgstr ""
+
+#: Game.Levels.Proof.P3_2_2
+msgid "To prove P → Q, it amounts to take P as an assumption and prove Q.\n"
+"Type 'intro h1' to let P be an assumption h1 and our goal becomes Q."
+msgstr ""
+
+#: Game.Levels.Proof.P3_2_2
+msgid "To prove 'x - 3 = 0', it suffice to show (x-3)^2=0.\n"
+"The theorem 'eq_zero_of_mul_self_eq_zero' can be used to prove this.\n"
+"Type 'apply eq_zero_of_mul_self_eq_zero' to apply this theorem."
+msgstr ""
+
+#: Game.Levels.Proof.P3_2_2
+msgid "'linarith' or 'norm_num will check (a - 3)*(a - 3) = a^2 - 6a + 9 holds."
+msgstr ""
+
+#: Game.Levels.Proof.P3_2_2
+msgid "'intro' introduce an element (for '∀x...') or an assumption (for 'P → Q').-"
+msgstr ""
+
+#: Game.Levels.Proof.P3_2_2
+msgid "'apply T' applies a theorem T to the goal.-"
+msgstr ""
+
+#: Game.Levels.Proof.P3_2_2
+msgid "To prove x=0, it suffice to show x^2=0-"
+msgstr ""
+
+#: Game.Levels.Proof.P3_3
+msgid "Exercise 3.3"
+msgstr ""
+
+#: Game.Levels.Proof.P3_3
+msgid "Let P(x,y) be a predicate over A.\n"
+"Prove that ∀ x,y ∈ A P(x,y) ↔ P(y,x) if and only if ∀ x,y ∈ A P(x,y) → P(y,x)."
+msgstr ""
+
+#: Game.Levels.Proof.P3_3
+msgid "To prove P ↔ Q, it amounts to prove P → Q and Q → P.\n"
+"\n"
+"Type 'constructor' to decompose the goal P ↔ Q into two subgoals P → Q and Q → P."
+msgstr ""
+
+#: Game.Levels.Proof.P3_3
+msgid "Now you have two subgoals: 'Active Goal' and 'Goal 2'.\n"
+"You may focus on Goal 2 first by typing 'pick_goal 2'.\n"
+"Now your turn!"
+msgstr ""
+
+#: Game.Levels.Proof.P3_3
+msgid "If the goal h is exactly in the assumptions, type 'exact h' to solve it.\n"
+"Or you can type 'assumption' without specifying the assumption h."
+msgstr ""
+
+#: Game.Levels.Proof.P3_3
+msgid "If we already have h: ∀ (x y : A), P x y ↔ P y x,\n"
+"then in Lean, (h a b) represents P a b ↔ P b a.\n"
+"In Lean, if h is an assumption of the from P ↔ Q, then h.1 represents P → Q\n"
+"and h.2 represents Q → P.\n"
+"Type 'exact (h x y).1' to solve the goal."
+msgstr ""
+
+#: Game.Levels.Proof.P3_3
+msgid "Tactic 'constructor' decompose the goal P ↔ Q into P → Q and Q → P-"
+msgstr ""
+
+#: Game.Levels.Proof.P3_3
+msgid "Tactic 'exact h' solves the goal if the goal h is exactly in the assumptions-"
+msgstr ""
+
+#: Game.Levels.Proof.P3_3
+msgid "Tactic 'assumption' solve the current goal if it is one of the assumptions-"
+msgstr ""
+
+#: Game.Levels.Proof.P3_3
+msgid "Tactic 'pick_goal' allows to focus on a specific goal.\n"
+"Type pick_goal 2 to pick the second goal.-"
+msgstr ""
+
+#: Game.Levels.Proof
+msgid "Chapter 3. Proof"
+msgstr ""
+
+#: Game.Levels.Proof
+msgid "Here contains Exercises 3.2 and 3.3 from Chapter 3: Proof.\n"
+"\n"
+"We will learn how to prove theorems in Lean along the way."
+msgstr ""
+
+#: Game.Levels.Set.P4_6
+msgid "Exercise 4.6"
+msgstr ""
+
+#: Game.Levels.Set.P4_6
+msgid "Let A, B be sets, prove that A ⊆ B if and only if A ∪ B = B."
+msgstr ""
+
+#: Game.Levels.Set.P4_6
+msgid "To prove A ∪ B = B, it suffices to prove ∀x, x ∈ A ∪ B ↔ x ∈ B.\n"
+"Type 'ext x' to introduce an element x and prove the equivalence."
+msgstr ""
+
+#: Game.Levels.Set.P4_6
+msgid "From the assumption 'h: x ∈ A ∪ B', we may split into two cases with assumption 'x ∈ A' or 'x ∈ B'.\n"
+"Type 'obtain xa | xb := h' to split into two cases with 'xa: x ∈ A' or 'xb: x ∈ B'."
+msgstr ""
+
+#: Game.Levels.Set.P4_6
+msgid "To prove x ∈ A ∪ B, it suffice to prove x ∈ A ∨ x ∈ B.\n"
+"Type 'left' to prove x ∈ A and 'right' to prove x ∈ B."
+msgstr ""
+
+#: Game.Levels.Set.P4_6
+msgid "Since we already have assumption h: A ∪ B = B, we may rewrite the goal x ∈ B by x ∈ A ∪ B.\n"
+"Type 'rewrite [← h]' (or whatever name for A ∪ B = B) to rewrite the goal.\n"
+"Here ← means we are rewriting from right to left in the equation A ∪ B = B."
+msgstr ""
+
+#: Game.Levels.Set.P4_6
+msgid "Tactic 'obtain H1 | H2 := H' split the assumption H: P ∨ Q into two cases\n"
+" with assumption H1: P or H2: Q respectively-"
+msgstr ""
+
+#: Game.Levels.Set.P4_6
+msgid "Tactic 'ext x' reduce the goal A = B to x ∈ A ↔ x ∈ B"
+msgstr ""
+
+#: Game.Levels.Set.P4_6
+msgid "Tactic 'left' reduce the goal P ∨ Q to P."
+msgstr ""
+
+#: Game.Levels.Set.P4_6
+msgid "Tactic 'right' reduce the goal P ∨ Q to Q."
+msgstr ""
+
+#: Game.Levels.Set.P4_6
+msgid "Tactic 'rewrite [h]' or 'rewrite [← h]' rewrite the current goal with assumption h,\n"
+"where h is usually an equivalence or an equation"
+msgstr ""
+
+#: Game.Levels.Set.P4_6
+msgid "'rw' is the same as 'rewrite"
+msgstr ""
+
+#: Game.Levels.Set.P4_7
+msgid "Exercise 4.10"
+msgstr ""
+
+#: Game.Levels.Set.P4_7
+msgid "Let A, B be sets. Show that A ⊆ B if and only if A ∩ B = A."
+msgstr ""
+
+#: Game.Levels.Set.P4_7
+msgid "Now your turn! The proof should be analogous to the previous one."
+msgstr ""
+
+#: Game.Levels.Set.P4_7
+msgid "If in the assumptions we have h: x ∈ A ∩ B, then we know both x ∈ A and x ∈ B.\n"
+"Type 'obtain ⟨xa, xb⟩ := h' to obtain xa: x ∈ A and xb: x ∈ B."
+msgstr ""
+
+#: Game.Levels.Set.P4_7
+msgid "If we have h: x ∈ A ∩ B, then h.1 means x ∈ A and h.2 means x ∈ B."
+msgstr ""
+
+#: Game.Levels.Set.P4_7
+msgid "Tactic 'obtain ⟨H1, H2⟩ := H' is applied to assumption H: P ∧ Q to obtain two new assumptions H1: P and H2: Q\n"
+"'obtain H1 | H2 := H is applied to H: P ∨ Q to split into two cases.\n"
+"-"
+msgstr ""
+
+#: Game.Levels.Set
+msgid "Chapter 4. Set"
+msgstr ""
+
+#: Game.Levels.Set
+msgid "Here contains Exercises 4.6 and 4.7 from Chapter 4: Sets.\n"
+"\n"
+"We will learn how to prove theorems in Lean along the way."
+msgstr ""
+
+#: Game.Levels.Relation.P5_4
+msgid "Exercise 5.4 (1)"
+msgstr ""
+
+#: Game.Levels.Relation.P5_4
+msgid "Let R be a relation from ℤ to ℤ such that R a b if and only if a-b is even.\n"
+"Prove that R = R⁻¹."
+msgstr ""
+
+#: Game.Levels.Relation.P5_4
+msgid "Relations are sets, so to prove R = R⁻¹ as set equality,\n"
+"we can use tactic 'ext a b'."
+msgstr ""
+
+#: Game.Levels.Relation.P5_4
+msgid "We may rewrite R⁻¹ by the definition of inverse using 'rewrite [inverse]'."
+msgstr ""
+
+#: Game.Levels.Relation.P5_4
+msgid "We may also unfold the definition of R using 'rewrite [R]' or 'unfold R'.\n"
+"To unfold the definition of R in an assumption h,\n"
+"Type 'rewrite [R] at h' or 'unfold R at h."
+msgstr ""
+
+#: Game.Levels.Relation.P5_4
+msgid "a-b is even if and only if b-a is even.\n"
+"Type 'Even_negation_iff' to apply this."
+msgstr ""
+
+#: Game.Levels.Relation.P5_4
+msgid "We may rewrite R⁻¹ by the definition of inverse using rw [inverse]."
+msgstr ""
+
+#: Game.Levels.Relation.P5_4
+msgid "We may also unfold the definition of R using rw [R] or unfold [R].\n"
+"To unfold the definition of R in an assumption h,\n"
+"we may use the tactic 'rewrite [R] at h' or 'unfold R at h."
+msgstr ""
+
+#: Game.Levels.Relation.P5_4
+msgid "To prove b-a is even, it suffices to prove a-b is even.\n"
+"Type 'apply Even_negation' to apply this."
+msgstr ""
+
+#: Game.Levels.Relation.P5_4
+msgid "Tactic 'simp' simplify the current goal."
+msgstr ""
+
+#: Game.Levels.Relation.P5_4
+msgid "Tactic 'unfold R' unfolds a definition R. It is the same as rw [R].\n"
+" 'unfold R at h' unfolds the definition R in the assumption h"
+msgstr ""
+
+#: Game.Levels.Relation.P5_4
+msgid "If a-b is even, then so do b-a."
+msgstr ""
+
+#: Game.Levels.Relation.P5_4
+msgid "a-b is even if and only if b-a is even."
+msgstr ""
+
+#: Game.Levels.Relation.P5_4
+msgid "'inv_def' states the definition of the inverse of relations. R.inv a b if and only if R b a."
+msgstr ""
+
+#: Game.Levels.Relation.P5_4
+msgid "For any a,b ∈ ℤ, a R b if and only if a-b is even"
+msgstr ""
+
+#: Game.Levels.Relation.P5_4_2
+msgid "Exercise 5.4 (2)"
+msgstr ""
+
+#: Game.Levels.Relation.P5_4_2
+msgid "Let R be a relation from ℤ to ℤ such that R a b if and only if a-b is even.\n"
+"Prove that R = R • R."
+msgstr ""
+
+#: Game.Levels.Relation.P5_4_2
+msgid "We may rewrite • by the definition of composition in an assumption h.\n"
+"Type 'rw [composition] at h' or 'unfold composition at h."
+msgstr ""
+
+#: Game.Levels.Relation.P5_4_2
+msgid "If we have an assumption h: ∃ y, P(y), then we may obtain an object c with P(c).\n"
+"Type 'obtain ⟨c, h1⟩ := h' to obtain c and h2: P(c)."
+msgstr ""
+
+#: Game.Levels.Relation.P5_4_2
+msgid "If a-c and c-b are both even, then a-b is even as well.\n"
+"Since the sum of two even numbers is still even.\n"
+"Type 'apply Even_add' to apply this fact."
+msgstr ""
+
+#: Game.Levels.Relation.P5_4_2
+msgid "Type assumption to clear the remaining goals."
+msgstr ""
+
+#: Game.Levels.Relation.P5_4_2
+msgid "R • S means the composition of two relations R and S.\n"
+"To use • in a tactic, use \"composition\", e.g, unfold composition."
+msgstr ""
+
+#: Game.Levels.Relation.P5_4_2
+msgid "If a-b is even and b-c is even, then a-c is also even by adding a-b and b-c."
+msgstr ""
+
+#: Game.Levels.Relation.P5_4_2
+msgid "Tactic 'obtain ⟨H1, H2⟩ := H' is applied to assumption H: P ∧ Q to obtain two new assumptions H1: P and H2: Q\n"
+"'obtain H1 | H2 := H is applied to H: P ∨ Q to split into two cases.\n"
+"'obtain ⟨c,h1⟩ := H is applied to H: ∃ y P(y).-"
+msgstr ""
+
+#: Game.Levels.Relation.P5_5
+msgid "Let A B C D be sets, R is a relation from A to B,\n"
+"S is a relation from B to C, and T is a relation from C to D.\n"
+"Prove that T • (S• R) = (T • S) • R."
+msgstr ""
+
+#: Game.Levels.Relation.P5_5
+msgid "Actually the two expressions are logically equal,\n"
+"type 'tauto' to prove it."
+msgstr ""
+
+#: Game.Levels.Relation.P5_5
+msgid "Tactic \"tauto\" deal with purely logical deduction."
+msgstr ""
+
+#: Game.Levels.Relation.P5_9
+msgid "Exercise 5.9"
+msgstr ""
+
+#: Game.Levels.Relation.P5_9
+msgid "Let A, B be sets, R be a relation from A to B.\n"
+"Prove that R = (R⁻¹)⁻¹."
+msgstr ""
+
+#: Game.Levels.Relation
+msgid "Chapter 5. Relations"
+msgstr ""
+
+#: Game.Levels.Relation
+msgid "Here contains Exercises 5.4, 5.5 and 5.9 from Chapter 5: Relations.\n"
+"\n"
+"We will learn how to prove theorems in Lean along the way."
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation.P6_2_1
+msgid "Exercise 6.2"
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation.P6_2_1
+msgid "Let R = {(x, y) ∈ ℚ : xy ⩾ 0} be a relation from ℚ to ℚ.\n"
+" Decide whether R is reflexive."
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation.P6_2_1
+msgid "R is reflexive means x R x for any x ∈ Q.\n"
+"Type 'rewrite [Reflexive]' or 'dsimp [Reflexive]' (simplify the definition)\n"
+"to rewrtie the definition of Reflexive."
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation.P6_2_1
+msgid "For any a, a R a"
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation.P6_2_1
+msgid "For any x ∈ Q, x * x ≥ 0"
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation.P6_2_1
+msgid "Tactic 'dsimp' simplify the current goal by unfolding the definitions."
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation.P6_2_2
+msgid "Exercise 6.2"
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation.P6_2_2
+msgid "Let R = {(x, y) ∈ ℚ : xy ⩾ 0} be a relation from ℚ to ℚ.\n"
+" Decide whether R is symmetric."
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation.P6_2_2
+msgid "we may use the commutativity of multiplication x*y = y*x here\n"
+"Type rw[mul_comm]."
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation.P6_2_2
+msgid "For any a b, a R b implies b R a"
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation.P6_2_2
+msgid "For any a b ∈ ℚ, a * b = b * a"
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation.P6_2_3
+msgid "Exercise 6.2"
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation.P6_2_3
+msgid "Let R = {(x, y) ∈ ℚ : xy ⩾ 0} be a relation from ℚ to ℚ.\n"
+" Decide whether R is antisymmetric."
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation.P6_2_3
+msgid "We may directly simplify our goal by pushing the negation inside\n"
+"applying De Morgan's rule. Type 'push_neg' to simplify the goal."
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation.P6_2_3
+msgid "What is your counterexample?"
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation.P6_2_3
+msgid "For any a b, a R b and b R a implies a = b"
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation.P6_2_3
+msgid "Tactic \"push_neg\" pushes the outside ¬ to inside using De Morgan's rule."
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation.P6_2_3
+msgid "Tactic \"norm_num\" solve the problem of verifying computational facts,\n"
+" e.g, 1+1=2."
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation.P6_2_4
+msgid "Exercise 6.2"
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation.P6_2_4
+msgid "Let R = {(x, y) ∈ ℚ : xy ⩾ 0} be a relation from ℚ to ℚ.\n"
+" Decide whether R is transitive."
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation.P6_2_4
+msgid "For any a b c, a R b and b R c implies a R c."
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation.P6_2_5
+msgid "Exercise 6.2"
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation.P6_2_5
+msgid "Let S be a relation on R^2 by setting, for all (x1, y1), (x2, y2) ∈ R2,\n"
+"(x1, y1) S (x2, y2) ⇔ x1 ⩽ x2 and y1 ⩽ y2.\n"
+"Decide whether R is reflexive."
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation.P6_2_6
+msgid "Exercise 6.2"
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation.P6_2_6
+msgid "Let S be a relation on R^2 by setting, for all (x1, y1), (x2, y2) ∈ R2,\n"
+"(x1, y1) S (x2, y2) ⇔ x1 ⩽ x2 and y1 ⩽ y2.\n"
+"Decide whether R is symmetric."
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation.P6_2_7
+msgid "Exercise 6.2"
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation.P6_2_7
+msgid "Let S be a relation on R^2 by setting, for all (x1, y1), (x2, y2) ∈ R2,\n"
+"(x1, y1) S (x2, y2) ⇔ x1 ⩽ x2 and y1 ⩽ y2.\n"
+"Decide whether R is antisymmetric."
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation.P6_2_8
+msgid "Exercise 6.2"
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation.P6_2_8
+msgid "Let S be a relation on R^2 by setting, for all (x1, y1), (x2, y2) ∈ R2,\n"
+"(x1, y1) S (x2, y2) ⇔ x1 ⩽ x2 and y1 ⩽ y2.\n"
+"Decide whether R is transitive."
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation
+msgid "Chapter 6. Equivalence Relations and partial orders"
+msgstr ""
+
+#: Game.Levels.EquivalenceRelation
+msgid "Here contains Exercises 6.2 from Chapter 6: Equivalence Relations and partial orders.\n"
+"\n"
+"THIS WORLD IS STILL UNDER CONSTRUCTION"
 msgstr ""
 
 #: Game
