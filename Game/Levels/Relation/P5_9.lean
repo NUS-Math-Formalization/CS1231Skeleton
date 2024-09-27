@@ -19,7 +19,11 @@ set_option quotPrecheck false
 -- notation:max "R⁻¹" => Rel.inv R
 
 Statement : R = (R⁻¹)⁻¹ := by
-  Hint "Should be not hard, just unfold the definitions."
+  Hint "Should be not hard, just rewrite the definition of inverse."
   ext a b
-  rw [Rel.inv_def]
-  rw [Rel.inv_def]
+  rw [Inverse]
+  rw [Inverse]
+
+
+
+-- OnlyTheorem Rel.inv_def

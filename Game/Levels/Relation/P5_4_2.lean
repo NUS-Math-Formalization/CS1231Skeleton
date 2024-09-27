@@ -36,6 +36,7 @@ Statement : (R • R) = R := by
     Hint "If we have an assumption h: ∃ y, P(y), then we may obtain an object c with P(c).
     Type 'obtain ⟨c, h1⟩ := h' to obtain c and h2: P(c)."
     obtain ⟨c,h2⟩ := h1
+    Hint "We may unfold the definition of R now."
     rw [R]
     rw [R] at h2
     rw [R] at h2
@@ -59,9 +60,15 @@ Statement : (R • R) = R := by
     use a
     constructor
     · rw [R]
+      Hint "use 'norm_num' or 'simp' here."
+      Branch
+        norm_num
       simp
     · rw [R]
       exact h1
+
+/--Tactic 'simp' simplify the current goal. Can try if you are stuck.-/
+TacticDoc simp
 
 /-- R • S means the composition of two relations R and S.
 To use • in a tactic, use "composition", e.g, unfold composition. -/
@@ -76,6 +83,6 @@ NewTheorem Even_add
 'obtain H1 | H2 := H is applied to H: P ∨ Q to split into two cases.
 'obtain ⟨c,h1⟩ := H is applied to H: ∃ y P(y).--/
 TacticDoc obtain
-NewTactic obtain
+NewTactic obtain simp
 
-OnlyTheorems Even_add
+-- OnlyTheorem Even_add

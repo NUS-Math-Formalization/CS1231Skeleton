@@ -69,3 +69,5 @@ Statement : (T • (S • R))  = ((T • S) • R) := by
 /--Tactic "tauto" deal with purely logical deduction.-/
 TacticDoc tauto
 NewTactic tauto
+
+OnlyTheorem

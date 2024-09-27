@@ -41,3 +41,7 @@ lemma Even_add (a b c: ℤ) (h: Even (a-c) ∧ Even (c-b)) : Even (a-b) := by
   apply Even.add
   exact h.1
   exact h.2
+
+lemma Inverse (x : α) (y : β) : r⁻¹ y x ↔ r x y :=
+  Iff.rfl
+-- #align rel.inv_def Rel.inv_def
