@@ -19,7 +19,7 @@ Statement : ∀ x : ℝ, (x ^ 2 + 9 = 6 * x → x - 3 = 0) := by
   Type 'intro a' to pick such a.
   (The name 'a' is arbitrary and can be replaced by any name)"
   intro a
-  Hint "To prove P → Q, it amounts to take P as an assumption and prove Q.
+  Hint "To prove P → Q, it amounts to take P as an assumption and then prove Q.
   Type 'intro h1' to let P be an assumption h1 and our goal becomes Q."
   intro h1
   Hint "To prove 'x - 3 = 0', it suffice to show (x-3)^2=0.
@@ -35,7 +35,7 @@ Conclusion "If you ever want information about the theorems,
  you can click on items in the list of theorems on the right."
 
 /--'intro' introduce an element x (for Goal = 'For any x...'),
-or an assumption P(for Goal = If P then Q).--/
+or an assumption P(for Goal = P → Q).--/
 TacticDoc intro
 
 /--'apply T' applies a theorem T to the goal.--/

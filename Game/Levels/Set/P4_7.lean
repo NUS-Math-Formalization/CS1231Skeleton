@@ -19,7 +19,8 @@ Statement : A ⊆ B ↔ A ∩ B = A := by
     constructor
     · intro h2
       Hint "If in the assumptions we have h: x ∈ A ∩ B, then we know both x ∈ A and x ∈ B.
-      Type 'obtain ⟨xa, xb⟩ := h' to obtain xa: x ∈ A and xb: x ∈ B."
+      Type 'obtain ⟨xa, xb⟩ := h' to obtain xa: x ∈ A and xb: x ∈ B.
+      Type '⟨' using '\\<' "
       obtain ⟨xa, xb⟩ := h2
       · exact xa
     · intro h2
@@ -35,7 +36,7 @@ Statement : A ⊆ B ↔ A ∩ B = A := by
     exact h2.2
 
 
-/--Tactic 'obtain ⟨H1, H2⟩ := H' is applied to assumption H: P ∧ Q to obtain two new assumptions H1: P and H2: Q
+/--Tactic 'obtain ⟨H1, H2⟩ := H' (Type '⟨' using '\<') is applied to assumption H: P ∧ Q to obtain two new assumptions H1: P and H2: Q
 'obtain H1 | H2 := H is applied to H: P ∨ Q to split into two cases.
 --/
 TacticDoc obtain

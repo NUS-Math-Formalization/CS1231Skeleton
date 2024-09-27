@@ -14,9 +14,8 @@ Statement : ∃ x : ℝ, x ^ 2 + 9 = 6 * x := by
    That is, some a ∈ ℝ such that a^2 + 9 = 6 * a.
    Type 'use a' in the textbox to give the witness, where a ∈ ℝ is the solution to the equation."
   use 3
-  Hint "Now you need to prove that 3^2 + 9 = 6 * 3.
-  Fortunately, this can be done by some automatic tactics.
-
+  Hint "Now you need to prove that a^2 + 9 = a * 3.
+  Fortunately, this can be done by some automatic tactics (if your witness is correct).
   Type 'linarith' or 'norm_num' to verify the equation."
   Branch
     linarith
@@ -34,6 +33,8 @@ TacticDoc linarith
 /--Tactic 'norm_num' verifies arithmetic equations automatically.-/
 TacticDoc norm_num
 
-/--Tactic 'use a' proves goal ∃x ∈ A... if a is the witness.--/
+/--Tactic 'use a' proves goal ∃x ∈ A, P(x) if a is the witness of P.
+cf. Technique 3.2.1.
+--/
 TacticDoc use
 NewTactic linarith use norm_num

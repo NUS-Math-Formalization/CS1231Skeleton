@@ -12,11 +12,13 @@ variable (A B : Set α)
 Introduction "Let A, B be sets, prove that A ⊆ B if and only if A ∪ B = B."
 
 Statement : A ⊆ B ↔ A ∪ B = B := by
+  Hint "In case you jump tp Chapter 4, click Tactic 'constructor' on the right."
   constructor
   · intro h1
-    Hint "To prove A ∪ B = B, it suffices to prove ∀x, x ∈ A ∪ B ↔ x ∈ B.
-    Type 'ext x' to introduce an element x and prove the equivalence."
+    Hint "To prove A ∪ B = B, it suffices to prove for all x, x ∈ A ∪ B ↔ x ∈ B.
+    Type 'ext x' or 'ext' to introduce an element x and prove the equivalence."
     ext x
+    Hint "How do you prove something with '↔' ?"
     constructor
     · intro h2
       Hint "From the assumption 'h: x ∈ A ∪ B', we may split into two cases with assumption 'x ∈ A' or 'x ∈ B'.
@@ -27,7 +29,7 @@ Statement : A ⊆ B ↔ A ∪ B = B := by
       · exact xb
     · intro h2
       Hint "To prove x ∈ A ∪ B, it suffice to prove x ∈ A ∨ x ∈ B.
-      Type 'left' to prove x ∈ A and 'right' to prove x ∈ B."
+      Type 'left' to prove x ∈ A or 'right' to prove x ∈ B."
       right
       exact h2
   · intro h1
@@ -45,7 +47,9 @@ Statement : A ⊆ B ↔ A ∪ B = B := by
  with assumption H1: P or H2: Q respectively--/
 TacticDoc obtain
 
-/--Tactic 'ext x' reduce the goal A = B to x ∈ A ↔ x ∈ B -/
+/--Tactic 'ext x' reduce the goal A = B to x ∈ A ↔ x ∈ B
+or simply 'ext'
+ -/
 TacticDoc ext
 
 /--Tactic 'left' reduce the goal P ∨ Q to P.-/

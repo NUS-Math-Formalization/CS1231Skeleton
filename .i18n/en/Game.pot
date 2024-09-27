@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Fri Sep 27 03:39:26 2024\n"
+"POT-Creation-Date: Fri Sep 27 21:11:10 2024\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -39,9 +39,8 @@ msgid "To show there exists some object x, we only need to provide a witness.\n"
 msgstr ""
 
 #: Game.Levels.Proof.P3_2
-msgid "Now you need to prove that 3^2 + 9 = 6 * 3.\n"
-"Fortunately, this can be done by some automatic tactics.\n"
-"\n"
+msgid "Now you need to prove that a^2 + 9 = a * 3.\n"
+"Fortunately, this can be done by some automatic tactics (if your witness is correct).\n"
 "Type 'linarith' or 'norm_num' to verify the equation."
 msgstr ""
 
@@ -60,7 +59,9 @@ msgid "Tactic 'norm_num' verifies arithmetic equations automatically."
 msgstr ""
 
 #: Game.Levels.Proof.P3_2
-msgid "Tactic 'use a' proves goal ∃x ∈ A... if a is the witness.-"
+msgid "Tactic 'use a' proves goal ∃x ∈ A, P(x) if a is the witness of P.\n"
+"cf. Technique 3.2.1.\n"
+"-"
 msgstr ""
 
 #: Game.Levels.Proof.P3_2_2
@@ -80,7 +81,7 @@ msgid "To prove 'For any x ∈ ℝ ...', one start with picking an arbitrary a �
 msgstr ""
 
 #: Game.Levels.Proof.P3_2_2
-msgid "To prove P → Q, it amounts to take P as an assumption and prove Q.\n"
+msgid "To prove P → Q, it amounts to take P as an assumption and then prove Q.\n"
 "Type 'intro h1' to let P be an assumption h1 and our goal becomes Q."
 msgstr ""
 
@@ -101,7 +102,7 @@ msgstr ""
 
 #: Game.Levels.Proof.P3_2_2
 msgid "'intro' introduce an element x (for Goal = 'For any x...'),\n"
-"or an assumption P(for Goal = If P then Q).-"
+"or an assumption P(for Goal = P → Q).-"
 msgstr ""
 
 #: Game.Levels.Proof.P3_2_2
@@ -141,13 +142,14 @@ msgstr ""
 #: Game.Levels.Proof.P3_3
 msgid "If we already have h: ∀ (x y : A), P x y ↔ P y x,\n"
 "then in Lean, (h a b) represents P a b ↔ P b a.\n"
-"In Lean, if h is an assumption of the from P ↔ Q, then h.1 represents P → Q\n"
+"In Lean, if h is an assumption of the form P ↔ Q, then h.1 represents P → Q\n"
 "and h.2 represents Q → P.\n"
 "Type 'exact (h x y).1' to solve the goal."
 msgstr ""
 
 #: Game.Levels.Proof.P3_3
-msgid "Tactic 'constructor' decompose the goal P ↔ Q into P → Q and Q → P-"
+msgid "Tactic 'constructor' decompose the goal P ↔ Q into P → Q and Q → P (cf. Technique 3.2.9),\n"
+"Or decompose the goal P ∧ Q into P and Q-"
 msgstr ""
 
 #: Game.Levels.Proof.P3_3
@@ -170,7 +172,7 @@ msgstr ""
 #: Game.Levels.Proof
 msgid "Here contains Exercises 3.2 and 3.3 from Chapter 3: Proof.\n"
 "\n"
-"We will learn how to prove theorems in Lean along the way."
+"We will learn how to prove theorems along the way."
 msgstr ""
 
 #: Game.Levels.Set.P4_6
@@ -182,8 +184,16 @@ msgid "Let A, B be sets, prove that A ⊆ B if and only if A ∪ B = B."
 msgstr ""
 
 #: Game.Levels.Set.P4_6
-msgid "To prove A ∪ B = B, it suffices to prove ∀x, x ∈ A ∪ B ↔ x ∈ B.\n"
-"Type 'ext x' to introduce an element x and prove the equivalence."
+msgid "In case you jump tp Chapter 4, click Tactic 'constructor' on the right."
+msgstr ""
+
+#: Game.Levels.Set.P4_6
+msgid "To prove A ∪ B = B, it suffices to prove for all x, x ∈ A ∪ B ↔ x ∈ B.\n"
+"Type 'ext x' or 'ext' to introduce an element x and prove the equivalence."
+msgstr ""
+
+#: Game.Levels.Set.P4_6
+msgid "How do you prove something with '↔' ?"
 msgstr ""
 
 #: Game.Levels.Set.P4_6
@@ -193,7 +203,7 @@ msgstr ""
 
 #: Game.Levels.Set.P4_6
 msgid "To prove x ∈ A ∪ B, it suffice to prove x ∈ A ∨ x ∈ B.\n"
-"Type 'left' to prove x ∈ A and 'right' to prove x ∈ B."
+"Type 'left' to prove x ∈ A or 'right' to prove x ∈ B."
 msgstr ""
 
 #: Game.Levels.Set.P4_6
@@ -208,7 +218,8 @@ msgid "Tactic 'obtain H1 | H2 := H' split the assumption H: P ∨ Q into two cas
 msgstr ""
 
 #: Game.Levels.Set.P4_6
-msgid "Tactic 'ext x' reduce the goal A = B to x ∈ A ↔ x ∈ B"
+msgid "Tactic 'ext x' reduce the goal A = B to x ∈ A ↔ x ∈ B\n"
+"or simply 'ext'"
 msgstr ""
 
 #: Game.Levels.Set.P4_6
@@ -242,7 +253,8 @@ msgstr ""
 
 #: Game.Levels.Set.P4_7
 msgid "If in the assumptions we have h: x ∈ A ∩ B, then we know both x ∈ A and x ∈ B.\n"
-"Type 'obtain ⟨xa, xb⟩ := h' to obtain xa: x ∈ A and xb: x ∈ B."
+"Type 'obtain ⟨xa, xb⟩ := h' to obtain xa: x ∈ A and xb: x ∈ B.\n"
+"Type '⟨' using '\\<'"
 msgstr ""
 
 #: Game.Levels.Set.P4_7
@@ -250,7 +262,7 @@ msgid "If we have h: x ∈ A ∩ B, then h.1 means x ∈ A and h.2 means x ∈ B
 msgstr ""
 
 #: Game.Levels.Set.P4_7
-msgid "Tactic 'obtain ⟨H1, H2⟩ := H' is applied to assumption H: P ∧ Q to obtain two new assumptions H1: P and H2: Q\n"
+msgid "Tactic 'obtain ⟨H1, H2⟩ := H' (Type '⟨' using '\\<') is applied to assumption H: P ∧ Q to obtain two new assumptions H1: P and H2: Q\n"
 "'obtain H1 | H2 := H is applied to H: P ∨ Q to split into two cases.\n"
 "-"
 msgstr ""
@@ -260,7 +272,9 @@ msgid "Chapter 4. Set"
 msgstr ""
 
 #: Game.Levels.Set
-msgid "Here contains Exercises 4.6 and 4.7 from Chapter 4: Sets."
+msgid "Here contains Exercises 4.6 and 4.7 from Chapter 4: Sets.\n"
+"\n"
+"In case you skip the previous chapters, click items on the right to check how to use them."
 msgstr ""
 
 #: Game.Levels.Relation.P5_4
@@ -317,6 +331,12 @@ msgid "Tactic 'unfold R' unfolds a definition R. It is the same as rw [R].\n"
 msgstr ""
 
 #: Game.Levels.Relation.P5_4
+msgid "Tactic 'rewrite [h]' or 'rewrite [← h]' rewrite the current goal with assumption h,\n"
+"where h is usually an equivalence, equation or a definition.\n"
+"'rewrite [h] at h1' rewrites the assumption h1 with h"
+msgstr ""
+
+#: Game.Levels.Relation.P5_4
 msgid "If a-b is even, then so do b-a."
 msgstr ""
 
@@ -339,6 +359,10 @@ msgstr ""
 #: Game.Levels.Relation.P5_4_2
 msgid "Let R be a relation from ℤ to ℤ such that R a b if and only if a-b is even.\n"
 "Prove that R = R • R."
+msgstr ""
+
+#: Game.Levels.Relation.P5_4_2
+msgid "How to show two relations (sets) are equal?"
 msgstr ""
 
 #: Game.Levels.Relation.P5_4_2
@@ -387,8 +411,18 @@ msgid "Let A B C D be sets, R is a relation from A to B,\n"
 msgstr ""
 
 #: Game.Levels.Relation.P5_5
+msgid "We may either split ↔ into two directions,\n"
+"or unfold the definition of composition."
+msgstr ""
+
+#: Game.Levels.Relation.P5_5
 msgid "Actually the two expressions are logically equal,\n"
-"type 'tauto' to prove it."
+"type 'tauto'."
+msgstr ""
+
+#: Game.Levels.Relation.P5_5
+msgid "Now your turn! The proof is a bit long,\n"
+"but all the steps should appeared previously."
 msgstr ""
 
 #: Game.Levels.Relation.P5_5
@@ -404,12 +438,18 @@ msgid "Let A, B be sets, R be a relation from A to B.\n"
 "Prove that R = (R⁻¹)⁻¹."
 msgstr ""
 
+#: Game.Levels.Relation.P5_9
+msgid "Should be not hard, just unfold the definitions."
+msgstr ""
+
 #: Game.Levels.Relation
 msgid "Chapter 5. Relations"
 msgstr ""
 
 #: Game.Levels.Relation
-msgid "Here contains Exercises 5.4, 5.5 and 5.9 from Chapter 5: Relations."
+msgid "Here contains Exercises 5.4, 5.5 and 5.9 from Chapter 5: Relations.\n"
+"\n"
+"In case you skip the previous chapters, click items on the right to check how to use them."
 msgstr ""
 
 #: Game.Levels.EquivalenceRelation.P6_2_1

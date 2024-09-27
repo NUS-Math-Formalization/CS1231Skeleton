@@ -35,19 +35,21 @@ Statement : (∀ (x y : A), P x y → P y x) ↔ (∀ (x y : A), P x y ↔ P y x
       exact h3
   · intro h1
     intro x y
-    Branch
-      have h3 : P x y ↔ P y x := by
-        apply h1
-      exact h3.1
+    -- Branch
+    --   have h3 : P x y ↔ P y x := by
+    --     apply h1
+    --   exact h3.1
     Hint "If we already have h: ∀ (x y : A), P x y ↔ P y x,
     then in Lean, (h a b) represents P a b ↔ P b a.
-    In Lean, if h is an assumption of the from P ↔ Q, then h.1 represents P → Q
+    In Lean, if h is an assumption of the form P ↔ Q, then h.1 represents P → Q
     and h.2 represents Q → P.
     Type 'exact (h x y).1' to solve the goal."
     exact (h1 x y).1
 
 
-/-- Tactic 'constructor' decompose the goal P ↔ Q into P → Q and Q → P--/
+/-- Tactic 'constructor' decompose the goal P ↔ Q into P → Q and Q → P (cf. Technique 3.2.9),
+Or decompose the goal P ∧ Q into P and Q--/
+--/
 TacticDoc constructor
 
 /--Tactic 'exact h' solves the goal if the goal h is exactly in the assumptions--/

@@ -22,12 +22,16 @@ Prove that T • (S• R) = (T • S) • R."
 
 Statement : (T • (S • R))  = ((T • S) • R) := by
   ext a d
+  Hint "We may either split ↔ into two directions,
+   or unfold the definition of composition."
   Branch
     unfold composition
     Hint "Actually the two expressions are logically equal,
-     type 'tauto' to prove it."
+     type 'tauto'."
     tauto
   constructor
+  Hint "Now your turn! The proof is a bit long,
+   but all the steps should appeared previously."
   · intro h1
     rw [composition] at h1
     obtain ⟨c,h2⟩ := h1

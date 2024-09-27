@@ -26,6 +26,7 @@ Prove that R = R • R."
 
 
 Statement : (R • R) = R := by
+  Hint "How to show two relations (sets) are equal?"
   ext a b
   constructor
   · intro h1
