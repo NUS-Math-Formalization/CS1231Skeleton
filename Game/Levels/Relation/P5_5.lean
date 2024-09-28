@@ -33,16 +33,29 @@ Statement : (T • (S • R))  = ((T • S) • R) := by
   Hint "Now your turn! The proof is a bit long,
    but all the steps should appeared previously."
   · intro h1
-    rw [composition] at h1
+    unfold composition at h1
     obtain ⟨c,h2⟩ := h1
+    Hint "Recall that if h: P ∧ Q, then
+    'obtain ⟨h1, h2⟩ := h' decompose h into h1: P and h2: Q ."
     obtain ⟨h3,h4⟩ := h2
     -- obtain ⟨h3, h4⟩ := h2
-    rw [composition] at h3
+    -- rw [composition] at h3
     obtain ⟨b, h5⟩ := h3
+    Branch
+      unfold composition
+      use b
+      constructor
+      · Hint "Recall that if h: P ∧ Q, then h.1 means P and h.2 means Q."
+        exact h5.1
+      · use c
+        constructor
+        · exact h5.2
+        · exact h4
     rw [composition]
     use b
     constructor
-    · exact h5.1
+    · Hint "Recall that if h: P ∧ Q, then h.1 means P and h.2 means Q."
+      exact h5.1
     · rw [composition]
       use c
       constructor

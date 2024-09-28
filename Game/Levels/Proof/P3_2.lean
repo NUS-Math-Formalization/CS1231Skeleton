@@ -16,7 +16,7 @@ Statement : ∃ x : ℝ, x ^ 2 + 9 = 6 * x := by
   use 3
   Hint "Now you need to prove that a^2 + 9 = a * 3.
   Fortunately, this can be done by some automatic tactics (if your witness is correct).
-  Type 'linarith' or 'norm_num' to verify the equation."
+  Type 'linarith' to verify the equation."
   Branch
     linarith
   norm_num

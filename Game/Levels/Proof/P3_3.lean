@@ -22,15 +22,22 @@ Statement : (∀ (x y : A), P x y → P y x) ↔ (∀ (x y : A), P x y ↔ P y x
   Hint "Now you have two subgoals: 'Active Goal' and 'Goal 2'.
   You may focus on Goal 2 first by typing 'pick_goal 2'.
   Now your turn!"
-  · intro h1
+  · Hint "If the goal is P → Q, then type 'intro h' to assume P and prove Q."
+    intro h1
     intro x y
     constructor
-    · intro h2
+    · Hint "The goal can be directly solved by applying assumption h: ∀ (x y : A), P x y → P y x,
+      Type apply h to solve the goal. Here h is the name of the assumption."
+      Branch
+        apply h1
+      intro h2
       apply h1
       Hint "If the goal h is exactly in the assumptions, type 'exact h' to solve it.
       Or you can type 'assumption' without specifying the assumption h."
       exact h2
-    · intro h3
+    · Branch
+        apply h1
+      intro h3
       apply h1
       exact h3
   · intro h1

@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Fri Sep 27 22:27:16 2024\n"
+"POT-Creation-Date: Sat Sep 28 18:25:25 2024\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -41,7 +41,7 @@ msgstr ""
 #: Game.Levels.Proof.P3_2
 msgid "Now you need to prove that a^2 + 9 = a * 3.\n"
 "Fortunately, this can be done by some automatic tactics (if your witness is correct).\n"
-"Type 'linarith' or 'norm_num' to verify the equation."
+"Type 'linarith' to verify the equation."
 msgstr ""
 
 #: Game.Levels.Proof.P3_2
@@ -135,6 +135,15 @@ msgid "Now you have two subgoals: 'Active Goal' and 'Goal 2'.\n"
 msgstr ""
 
 #: Game.Levels.Proof.P3_3
+msgid "If the goal is P → Q, then type 'intro h' to assume P and prove Q."
+msgstr ""
+
+#: Game.Levels.Proof.P3_3
+msgid "The goal can be directly solved by applying assumption h: ∀ (x y : A), P x y → P y x,\n"
+"Type apply h to solve the goal. Here h is the name of the assumption."
+msgstr ""
+
+#: Game.Levels.Proof.P3_3
 msgid "If the goal h is exactly in the assumptions, type 'exact h' to solve it.\n"
 "Or you can type 'assumption' without specifying the assumption h."
 msgstr ""
@@ -202,19 +211,33 @@ msgid "From the assumption 'h: x ∈ A ∪ B', we may split into two cases with 
 msgstr ""
 
 #: Game.Levels.Set.P4_6
+msgid "We may use the assumption h: A ⊆ B to reduce the goal x ∈ B to x ∈ A.\n"
+"Type 'apply h' to apply this assumption."
+msgstr ""
+
+#: Game.Levels.Set.P4_6
 msgid "To prove x ∈ A ∪ B, it suffice to prove x ∈ A ∨ x ∈ B.\n"
 "Type 'left' to prove x ∈ A or 'right' to prove x ∈ B."
 msgstr ""
 
 #: Game.Levels.Set.P4_6
+msgid "To show A ⊆ B, we need to prove for all x, x ∈ A → x ∈ B.\n"
+"Type 'intro x' to introduce an element x."
+msgstr ""
+
+#: Game.Levels.Set.P4_6
 msgid "Since we already have assumption h: A ∪ B = B, we may rewrite the goal x ∈ B by x ∈ A ∪ B.\n"
-"Type 'rewrite [← h]' (or whatever name for A ∪ B = B) to rewrite the goal.\n"
+"Type 'rewrite [← h]' (Type \\l for ←) to rewrite the goal.\n"
 "Here ← means we are rewriting from right to left in the equation A ∪ B = B."
 msgstr ""
 
 #: Game.Levels.Set.P4_6
-msgid "Tactic 'obtain H1 | H2 := H' split the assumption H: P ∨ Q into two cases\n"
-" with assumption H1: P or H2: Q respectively-"
+msgid "'obtain H1 | H2 := H is applied to H: P ∨ Q to split into two cases H1: P and H2: Q.\n"
+"<br>\n"
+"'obtain ⟨H1, H2⟩ := H' (Type '⟨' using '\\<') is applied to assumption H: P ∧ Q to obtain two new assumptions H1: P and H2: Q\n"
+"<br>\n"
+"'obtain ⟨c,h1⟩ := H is applied to H: ∃ y P(y).\n"
+"-"
 msgstr ""
 
 #: Game.Levels.Set.P4_6
@@ -232,7 +255,10 @@ msgstr ""
 
 #: Game.Levels.Set.P4_6
 msgid "Tactic 'rewrite [h]' or 'rewrite [← h]' rewrite the current goal with assumption h,\n"
-"where h is usually an equivalence or an equation"
+"where h is usually an equivalence, equation or a definition.\n"
+"<br>\n"
+"'rewrite [h] at h1' rewrites the assumption h1 with h\n"
+"Here h could be a equivalence, equation or some definition."
 msgstr ""
 
 #: Game.Levels.Set.P4_6
@@ -254,17 +280,17 @@ msgstr ""
 #: Game.Levels.Set.P4_7
 msgid "If in the assumptions we have h: x ∈ A ∩ B, then we know both x ∈ A and x ∈ B.\n"
 "Type 'obtain ⟨xa, xb⟩ := h' to obtain xa: x ∈ A and xb: x ∈ B.\n"
-"Type '⟨' using '\\<'"
+"Type '⟨' using '\\ <'"
+msgstr ""
+
+#: Game.Levels.Set.P4_7
+msgid "Here we need to replace the assumption h1: x ∈ A\n"
+"by x ∈ A ∩ B using the assumption h2: A ∩ B = A.\n"
+"Type 'rewrite [h2] at h1' to rewrite the goal."
 msgstr ""
 
 #: Game.Levels.Set.P4_7
 msgid "If we have h: x ∈ A ∩ B, then h.1 means x ∈ A and h.2 means x ∈ B."
-msgstr ""
-
-#: Game.Levels.Set.P4_7
-msgid "Tactic 'obtain ⟨H1, H2⟩ := H' (Type '⟨' using '\\<') is applied to assumption H: P ∧ Q to obtain two new assumptions H1: P and H2: Q\n"
-"'obtain H1 | H2 := H is applied to H: P ∨ Q to split into two cases.\n"
-"-"
 msgstr ""
 
 #: Game.Levels.Set
@@ -373,12 +399,12 @@ msgstr ""
 
 #: Game.Levels.Relation.P5_4_2
 msgid "We may rewrite • by the definition of composition in an assumption h.\n"
-"Type 'rw [composition] at h' or 'unfold composition at h."
+"Type 'rewrite [composition] at h' or 'unfold composition at h."
 msgstr ""
 
 #: Game.Levels.Relation.P5_4_2
 msgid "If we have an assumption h: ∃ y, P(y), then we may obtain an object c with P(c).\n"
-"Type 'obtain ⟨c, h1⟩ := h' to obtain c and h2: P(c)."
+"Type 'obtain ⟨c, h1⟩ := h' to obtain c and h1: P(c)."
 msgstr ""
 
 #: Game.Levels.Relation.P5_4_2
@@ -392,11 +418,15 @@ msgid "If a-c and c-b are both even, then a-b is even as well.\n"
 msgstr ""
 
 #: Game.Levels.Relation.P5_4_2
-msgid "Type assumption to clear the remaining goals."
+msgid "Then type 'assumption' to clear the remaining goals (sorry its a bit messy)."
 msgstr ""
 
 #: Game.Levels.Relation.P5_4_2
 msgid "Which element should we choose?"
+msgstr ""
+
+#: Game.Levels.Relation.P5_4_2
+msgid "use 'norm_num' or 'simp' here."
 msgstr ""
 
 #: Game.Levels.Relation.P5_4_2
@@ -414,12 +444,6 @@ msgstr ""
 
 #: Game.Levels.Relation.P5_4_2
 msgid "If a-b is even and b-c is even, then a-c is also even by adding a-b and b-c."
-msgstr ""
-
-#: Game.Levels.Relation.P5_4_2
-msgid "Tactic 'obtain ⟨H1, H2⟩ := H' is applied to assumption H: P ∧ Q to obtain two new assumptions H1: P and H2: Q\n"
-"'obtain H1 | H2 := H is applied to H: P ∨ Q to split into two cases.\n"
-"'obtain ⟨c,h1⟩ := H is applied to H: ∃ y P(y).-"
 msgstr ""
 
 #: Game.Levels.Relation.P5_5
@@ -441,6 +465,19 @@ msgstr ""
 #: Game.Levels.Relation.P5_5
 msgid "Now your turn! The proof is a bit long,\n"
 "but all the steps should appeared previously."
+msgstr ""
+
+#: Game.Levels.Relation.P5_5
+msgid "Recall that if h: P ∧ Q, then\n"
+"'obtain ⟨h1, h2⟩ := h' decompose h into h1: P and h2: Q ."
+msgstr ""
+
+#: Game.Levels.Relation.P5_5
+msgid "Recall that if h: P ∧ Q, then h.1 means P and h.2 means Q."
+msgstr ""
+
+#: Game.Levels.Relation.P5_5
+msgid "Recall that if h: P ∧ Q, then h.1 means P and h.2 means Q."
 msgstr ""
 
 #: Game.Levels.Relation.P5_5

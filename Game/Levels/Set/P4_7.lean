@@ -20,7 +20,7 @@ Statement : A ⊆ B ↔ A ∩ B = A := by
     · intro h2
       Hint "If in the assumptions we have h: x ∈ A ∩ B, then we know both x ∈ A and x ∈ B.
       Type 'obtain ⟨xa, xb⟩ := h' to obtain xa: x ∈ A and xb: x ∈ B.
-      Type '⟨' using '\\<' "
+      Type '⟨' using '\\ <' "
       obtain ⟨xa, xb⟩ := h2
       · exact xa
     · intro h2
@@ -31,15 +31,17 @@ Statement : A ⊆ B ↔ A ∩ B = A := by
   · intro h1
     intro x
     intro h2
+    Hint "Here we need to replace the assumption h1: x ∈ A
+    by x ∈ A ∩ B using the assumption h2: A ∩ B = A.
+    Type 'rewrite [h2] at h1' to rewrite the goal."
     rw [← h1] at h2
     Hint "If we have h: x ∈ A ∩ B, then h.1 means x ∈ A and h.2 means x ∈ B."
     exact h2.2
 
 
-/--Tactic 'obtain ⟨H1, H2⟩ := H' (Type '⟨' using '\<') is applied to assumption H: P ∧ Q to obtain two new assumptions H1: P and H2: Q
-'obtain H1 | H2 := H is applied to H: P ∨ Q to split into two cases.
---/
-TacticDoc obtain
-NewTactic obtain
+-- /--asdfdfasdf.
+-- --/
+-- TacticDoc obtain
+-- NewTactic obtain
 
 DisabledTheorem eq_zero_of_mul_self_eq_zero
